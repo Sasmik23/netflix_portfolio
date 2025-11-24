@@ -37,8 +37,11 @@ export const dramas: Drama[] = [
   },
   {
     title: "Saavadi",
-    description:
-      "Saavadi follows Chithirapathi Nagesh, a once-celebrated playwright now struggling with a string of failures. When a brilliant new script arrives from an eager former student, Arul Rajan, it seems like the perfect chance for Chithirapathi to revive his faltering career. Together with his supportive wife, Meera, he invites Arul over to discuss a potential collaboration. But not everything is as it seems. Amidst unexpected twists, a nosy psychic neighbor and a sharp-eyed lawyer, get entangled in a web of ambition, deception, and survival. Set against the vibrant backdrop of 1970s Singapore, Saavadi is inspired by Deathtrap, written by Ira Levin in the same era. Saavadi aspires to be a darkly comic psychological thriller that asks: how far would you go to survive in this twisted world?",
+    description: `Saavadi follows Chithirapathi Nagesh, a once-celebrated playwright now struggling with a string of failures. 
+
+    When a brilliant new script arrives from an eager former student, Arul Rajan, it seems like the perfect chance for Chithirapathi to revive his faltering career. 
+
+    But not everything is as it seems. Saavadi aspires to be a darkly comic psychological thriller that asks: how far would you go to survive in this twisted world?`,
     role: "Arul Rajan",
     productionCompany: "Agam Theatre Lab",
     year: "2025",
