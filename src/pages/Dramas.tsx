@@ -1,0 +1,60 @@
+import React from 'react';
+import './Dramas.css';
+import { FaTheaterMasks, FaCalendarAlt, FaMapMarkerAlt, FaUserTie } from 'react-icons/fa';
+import { dramas } from '../data/dramas';
+
+const Dramas: React.FC = () => {
+
+    return (
+        <div className="dramas-container">
+            <h2 className="dramas-title">Theatre Productions</h2>
+            <p className="dramas-intro">My journey through Tamil and English theatre in Singapore</p>
+
+            <div className="dramas-grid">
+                {dramas.map((drama, index) => (
+                    <div
+                        key={index}
+                        className="drama-card"
+                        style={{ '--delay': `${index * 0.2}s` } as React.CSSProperties}
+                    >
+                        <div className="drama-poster">
+                            <img src={drama.image.url} alt={drama.title} className="drama-image" />
+                            <div className="drama-overlay">
+                                <div className="language-badge">{drama.language}</div>
+                            </div>
+                        </div>
+
+                        <div className="drama-details">
+                            <h3 className="drama-title">{drama.title}</h3>
+                            <div className="drama-role">
+                                <FaTheaterMasks className="icon" />
+                                <span>Role: {drama.role}</span>
+                            </div>
+
+                            <p className="drama-description">{drama.description}</p>
+
+                            <div className="drama-info">
+                                <div className="info-item">
+                                    <FaCalendarAlt className="icon" />
+                                    <span>{drama.year}</span>
+                                </div>
+                                <div className="info-item">
+                                    <FaMapMarkerAlt className="icon" />
+                                    <span>{drama.venue}</span>
+                                </div>
+                                <div className="info-item">
+                                    <FaUserTie className="icon" />
+                                    <span>Dir: {drama.director}</span>
+                                </div>
+                            </div>
+
+                            <div className="production-company">{drama.productionCompany}</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Dramas;

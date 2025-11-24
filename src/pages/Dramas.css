@@ -1,0 +1,183 @@
+/* Dramas.css */
+
+.dramas-container {
+  padding: 120px 20px;
+  background-color: #141414;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.dramas-title {
+  font-size: 2.5rem;
+  color: #e50914;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: slideDown 0.8s ease-in-out forwards;
+}
+
+.dramas-intro {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.dramas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.drama-card {
+  background: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards ease-in-out;
+  animation-delay: var(--delay);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drama-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.4);
+}
+
+.drama-poster {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.drama-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.drama-card:hover .drama-image {
+  transform: scale(1.05);
+}
+
+.drama-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.language-badge {
+  background: rgba(229, 9, 20, 0.9);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.drama-details {
+  padding: 20px;
+}
+
+.drama-title {
+  font-size: 1.4rem;
+  color: #e50914;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.drama-role {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.drama-role .icon {
+  color: #ffd700;
+}
+
+.drama-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.drama-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.info-item .icon {
+  color: #e50914;
+  font-size: 0.9rem;
+}
+
+.production-company {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .dramas-container {
+    padding: 100px 15px;
+  }
+  
+  .dramas-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .drama-card {
+    margin: 0 10px;
+  }
+  
+  .dramas-title {
+    font-size: 2rem;
+  }
+  
+  .dramas-intro {
+    font-size: 1rem;
+  }
+}

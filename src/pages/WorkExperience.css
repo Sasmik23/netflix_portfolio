@@ -1,10 +1,23 @@
-.vertical-timeline-element-content {
+.vertical-.timeline-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1b69 100%);
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.timeline-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e50914;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}content {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .vertical-timeline-element-content:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(229, 9, 20, 0.4);
 }
 
 
@@ -36,4 +49,87 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Timeline Image Styles - Positioned on opposite side */
+.timeline-image-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.3);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0d0d;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+/* On desktop, the timeline alternates sides based on the library's default behavior */
+@media (min-width: 1170px) {
+  /* Odd elements (1st, 3rd, 5th...) - content on RIGHT side of timeline, image on LEFT side */
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(odd) .timeline-image-container {
+    left: calc(100% + 120px);
+    right: auto;
+    top: 60px; /* Push down to avoid date overlap */
+  }
+  
+  /* Even elements (2nd, 4th, 6th...) - content on LEFT side of timeline, image on RIGHT side */
+  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even) .timeline-image-container {
+    right: calc(100% + 120px);
+    left: auto;
+    top: 60px; /* Push down to avoid date overlap */
+  }
+}
+
+/* Mobile - hide images */
+@media (max-width: 1170px) {
+  .timeline-image-container {
+    display: none;
+  }
+}
+
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.timeline-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Bullet list styling for timeline content */
+.timeline-bullet-list {
+  margin: 1em 0;
+  padding-left: 1.5em;
+  line-height: 1.6;
+}
+
+.timeline-bullet-list li {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.timeline-bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Date styling - add background for visibility over images */
+.vertical-timeline-element-date {
+  background: linear-gradient(135deg, #e50914 0%, #b20710 100%) !important;
+  padding: 10px 20px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.5) !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  display: inline-block !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  letter-spacing: 0.5px !important;
 }

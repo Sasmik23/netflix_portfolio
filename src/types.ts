@@ -12,18 +12,19 @@ export interface ProfileBanner {
 
 export interface WorkPermit {
   visaStatus: string;
-  expiryDate: Date;
-  summary: string;
-  additionalInfo: string;
+  expiryDate?: Date;
+  summary?: string;
+  additionalInfo?: string;
 }
 
 export interface TimelineItem {
-  timelineType: 'work' | 'education';
+  timelineType: "work" | "education";
   name: string;
   title: string;
   techStack: string;
   summaryPoints: string[];
   dateRange: string;
+  image?: string; // Optional image for the timeline item
 }
 
 export interface Project {
@@ -31,6 +32,8 @@ export interface Project {
   description: string;
   techUsed: string;
   image: { url: string };
+  images?: string[]; // Multiple images for carousel
+  link?: string;
 }
 
 export interface Certification {
@@ -52,9 +55,25 @@ export interface ContactMe {
   phoneNumber: string;
 }
 
-export interface Skill { 
+export interface Skill {
   name: string;
   category: string;
   description: string;
   icon: string;
+}
+
+export interface Drama {
+  title: string;
+  description: string;
+  role: string;
+  productionCompany: string;
+  year: string;
+  language: "Tamil" | "English";
+  image: { url: string };
+  bannerImage?: { url: string }; // Optional larger banner image for hero/header
+  venue: string;
+  director: string;
+  galleryImages?: string[]; // Optional array for additional gallery images
+  galleryCaptions?: string[]; // Optional captions for gallery images (must match galleryImages length)
+  videoLink?: string; // Optional link to video/recording
 }

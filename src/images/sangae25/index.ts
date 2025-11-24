@@ -1,0 +1,13 @@
+export { default as s25_1 } from "./Sangae 2-1275.jpg";
+export { default as s25_2 } from "./Sangae 2-045.jpg";
+export { default as s25_3 } from "./Sangae 2-053.jpg";
+export { default as s25_4 } from "./Sangae 2-055.jpg";
+export { default as s25_5 } from "./Sangae 2-059.jpg";
+export { default as s25_13 } from "./Sangae S1-248.jpg";
+export { default as s25_6 } from "./Sangae 2-714.jpg";
+export { default as s25_7 } from "./Sangae 2-1181.jpg";
+export { default as s25_8 } from "./Sangae 2-1187.jpg";
+export { default as s25_9 } from "./Sangae 2-1189.jpg";
+export { default as s25_10 } from "./Sangae 2-1197.jpg";
+export { default as s25_11 } from "./Sangae 2-448.jpg";
+export { default as s25_12 } from "./Sangae 2-069.jpg";

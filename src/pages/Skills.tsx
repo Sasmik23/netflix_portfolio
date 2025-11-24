@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Skills.css';
-import { getSkills } from '../queries/getSkills';
+import { skills as skillsData } from '../data/skills';
 
 import { FaReact, FaNodeJs, FaAws, FaDocker, FaGitAlt, FaJava } from 'react-icons/fa';
 import { SiRubyonrails, SiTypescript, SiPostgresql, SiMysql, SiKubernetes, SiGooglecloud, SiSpringboot, SiPhp, SiNetlify, SiHeroku, SiHtml5, SiCss3, SiRabbitmq, SiImessage } from 'react-icons/si';
@@ -26,22 +26,7 @@ const iconMap: { [key: string]: JSX.Element } = {
   SiImessage: <SiImessage />,
 };
 
-
 const Skills: React.FC = () => {
-
-  const [skillsData, setSkillsData] = useState<Skill[]>([]);
-
-  useEffect(() => {
-    async function fetchSkills() {
-      const data = await getSkills();
-      setSkillsData(data);
-    }
-
-    fetchSkills()
-  }, []);
-
-  if (skillsData.length === 0) return <div>Loading...</div>;
-
   const skillsByCategory = skillsData.reduce((acc: any, skill: any) => {
     if (!acc[skill.category]) acc[skill.category] = [];
     acc[skill.category].push(skill);

@@ -37,11 +37,11 @@ const Navbar: React.FC = () => {
             <img src={netflixLogo} alt="Netflix" />
           </Link>
           <ul className="navbar-links">
-            <li><Link to="/browse">Home</Link></li>
-            <li><Link to="/work-experience">Professional</Link></li>
-            <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/contact-me">Hire Me</Link></li>
+            <li><Link to="/browse" state={{ profileImage }}>Home</Link></li>
+            <li><Link to="/work-experience" state={{ profileImage }}>Timeline</Link></li>
+            <li><Link to="/skills" state={{ profileImage }}>Skills</Link></li>
+            <li><Link to="/projects" state={{ profileImage }}>Projects</Link></li>
+            <li><Link to="/contact-me" state={{ profileImage }}>Hire Me</Link></li>
           </ul>
         </div>
         <div className="navbar-right">
@@ -64,11 +64,11 @@ const Navbar: React.FC = () => {
           <img src={netflixLogo} alt="Netflix Logo" />
         </div>
         <ul>
-          <li><Link to="/browse" onClick={closeSidebar}><FaHome /> Home</Link></li>
-          <li><Link to="/work-experience" onClick={closeSidebar}><FaBriefcase /> Professional</Link></li>
-          <li><Link to="/skills" onClick={closeSidebar}><FaTools /> Skills</Link></li>
-          <li><Link to="/projects" onClick={closeSidebar}><FaProjectDiagram /> Projects</Link></li>
-          <li><Link to="/contact-me" onClick={closeSidebar}><FaEnvelope /> Hire Me</Link></li>
+          <li><Link to="/browse" onClick={closeSidebar} state={{ profileImage }}><FaHome /> Home</Link></li>
+          <li><Link to="/work-experience" onClick={closeSidebar} state={{ profileImage }}><FaBriefcase /> Professional</Link></li>
+          <li><Link to="/skills" onClick={closeSidebar} state={{ profileImage }}><FaTools /> Skills</Link></li>
+          <li><Link to="/projects" onClick={closeSidebar} state={{ profileImage }}><FaProjectDiagram /> Projects</Link></li>
+          <li><Link to="/contact-me" onClick={closeSidebar} state={{ profileImage }}><FaEnvelope /> Hire Me</Link></li>
         </ul>
       </div>
     </>
