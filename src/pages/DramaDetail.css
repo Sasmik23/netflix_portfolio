@@ -11,12 +11,14 @@
   position: relative;
   height: 80vh;
   overflow: hidden;
+  background-color: #000;
 }
 
 .hero-background {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: brightness(1.0);
 }
 
@@ -243,7 +245,8 @@
   }
 
   .drama-hero {
-    height: 60vh;
+    height: 50vh;
+    min-height: 400px;
   }
 
   .back-button {
