@@ -182,19 +182,49 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .adventurer-profile-content {
-    padding: 15px;
+    padding: 10px;
   }
   
-  .adventurer-profile-content .dramas-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .profile-header {
+    margin-bottom: 2rem;
   }
   
   .profile-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
   
   .profile-intro {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .netflix-drama-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .drama-poster-container {
+    height: 350px;
+  }
+
+  .drama-card-title {
+    font-size: 1.2rem;
+  }
+
+  .drama-card-role {
+    font-size: 0.9rem;
+  }
+
+  .card-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .play-button,
+  .info-button {
+    width: 100%;
+    justify-content: center;
   }
 }

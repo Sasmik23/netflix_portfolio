@@ -238,30 +238,75 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .drama-detail-container {
+    margin-top: 60px;
+  }
+
+  .drama-hero {
+    height: 60vh;
+  }
+
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
   .hero-overlay {
-    padding: 30px 20px;
+    padding: 20px 15px;
   }
 
   .drama-hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .hero-meta {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .language-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 15px 0 20px 0;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    justify-content: center;
   }
 
   .photo-gallery,
   .drama-details-section {
-    padding: 30px 20px;
+    padding: 25px 15px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .detail-item {
+    font-size: 0.95rem;
   }
 }
 

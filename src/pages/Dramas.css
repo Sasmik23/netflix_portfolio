@@ -161,7 +161,7 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
   .dramas-container {
-    padding: 100px 15px;
+    padding: 80px 10px 40px 10px;
   }
   
   .dramas-grid {
@@ -170,14 +170,31 @@
   }
   
   .drama-card {
-    margin: 0 10px;
+    margin: 0;
+  }
+
+  .drama-poster {
+    height: 250px;
+  }
+
+  .drama-details {
+    padding: 15px;
   }
   
   .dramas-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .dramas-intro {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .drama-title {
+    font-size: 1.2rem;
+  }
+
+  .drama-description {
+    font-size: 0.85rem;
   }
 }

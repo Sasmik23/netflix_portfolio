@@ -2,7 +2,6 @@ export const profileBackgroundGifs = {
   Computing: [
     "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTd3bDlmdGV3d29keTFrOGRob2pyd3Z3MGJlZTBmNWZ2cjF3NjhudCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif",
     "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGNidDl5emZpejY2eGFxa2I4NW0zZGNpbWRlbnBrZ3N2dWhhbzM1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TFPdmm3rdzeZ0kP3zG/giphy.gif",
-    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHZ1MGtpaTIyMHR2NThjeHBtamE4bDhnMjI5MjhxZWJqMDR1MXVmOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4Fh0B2CCaickE/giphy.gif",
   ],
   Theatre: [
     "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Q2dzgwNmlrNnR6eTRwczR4Y2twMm90NnVocWw3ZHZwaHh2YTd0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDZceiSecNEBgdTbBN/giphy.gif",
