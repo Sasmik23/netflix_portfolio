@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProfileCard from '../components/ProfileCard';
-import clark_cs from '../images/Clark Kent_CS.jpeg';
-import clark_theatre from '../images/Clark Kent_Theatre.jpeg';
+import clark_cs from '../images/Clark_Kent_CS.jpeg';
+import clark_theatre from '../images/Clark_Kent_Theatre.jpeg';
 import { profileBackgroundGifs, getRandomGif } from '../data/profileGifs';
 import './browse.css';
 
