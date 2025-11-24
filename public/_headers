@@ -1,0 +1,33 @@
+# Set correct MIME types for all image files
+/static/media/*.jpeg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/media/*.jpg
+  Content-Type: image/jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/media/*.png
+  Content-Type: image/png
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/media/*.gif
+  Content-Type: image/gif
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/media/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/media/*.avif
+  Content-Type: image/avif
+  Cache-Control: public, max-age=31536000, immutable
+
+# Set correct MIME types for other static assets
+/static/js/*.js
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/css/*.css
+  Content-Type: text/css
+  Cache-Control: public, max-age=31536000, immutable
