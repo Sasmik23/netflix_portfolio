@@ -37,11 +37,9 @@ export const dramas: Drama[] = [
   },
   {
     title: "Saavadi",
-    description: `Saavadi follows Chithirapathi Nagesh, a once-celebrated playwright now struggling with a string of failures. 
-
-    When a brilliant new script arrives from an eager former student, Arul Rajan, it seems like the perfect chance for Chithirapathi to revive his faltering career. 
-
-    But not everything is as it seems. Saavadi aspires to be a darkly comic psychological thriller that asks: how far would you go to survive in this twisted world?`,
+    description: `Chithirapathi Nagesh, once a celebrated playwright, is desperate to revive his fading career.
+    When his former student Arul Rajan arrives with a brilliant new script, hope returns — briefly.
+    What begins as the promise of a creative partnership soon twists into something far more dangerous.`,
     role: "Arul Rajan",
     productionCompany: "Agam Theatre Lab",
     year: "2025",

@@ -7,7 +7,7 @@ export const contactMe: ContactMe = {
   summary: `
     I'm passionate about combining AI/ML with software engineering to build intelligent, 
     scalable systems. From training neural networks to architecting cloud infrastructures, 
-    I enjoy every step of bringing machine learning from research to real-world applications.
+    I enjoy bringing machine learning from research to real-world applications.
   `,
   companyUniversity: "National University of Singapore",
   linkedinLink: "https://www.linkedin.com/in/mikhil-anand-aa593437/",

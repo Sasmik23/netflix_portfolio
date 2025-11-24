@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
             <li><Link to="/work-experience" state={{ profileImage }}>Timeline</Link></li>
             <li><Link to="/skills" state={{ profileImage }}>Skills</Link></li>
             <li><Link to="/projects" state={{ profileImage }}>Projects</Link></li>
-            <li><Link to="/contact-me" state={{ profileImage }}>Hire Me</Link></li>
+            <li><Link to="/contact-me" state={{ profileImage }}>Contact Me</Link></li>
           </ul>
         </div>
         <div className="navbar-right">
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
           <li><Link to="/work-experience" onClick={closeSidebar} state={{ profileImage }}><FaBriefcase /> Professional</Link></li>
           <li><Link to="/skills" onClick={closeSidebar} state={{ profileImage }}><FaTools /> Skills</Link></li>
           <li><Link to="/projects" onClick={closeSidebar} state={{ profileImage }}><FaProjectDiagram /> Projects</Link></li>
-          <li><Link to="/contact-me" onClick={closeSidebar} state={{ profileImage }}><FaEnvelope /> Hire Me</Link></li>
+          <li><Link to="/contact-me" onClick={closeSidebar} state={{ profileImage }}><FaEnvelope /> Contact Me</Link></li>
         </ul>
       </div>
     </>
