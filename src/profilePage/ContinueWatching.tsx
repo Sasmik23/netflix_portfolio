@@ -33,7 +33,7 @@ const ContinueWatching: React.FC<ContinueWatchingProps> = ({ profile }) => {
 
   return (
     <div className="continue-watching-row">
-      <h2 className="row-title">Continue Watching for {profile}</h2>
+      <h2 className="row-title">Continue Watching</h2>
       <div className="card-row">
         {continueWatching.map((pick, index) => (
           <Link to={pick.link} key={index} className="pick-card" state={{ profileImage }}>

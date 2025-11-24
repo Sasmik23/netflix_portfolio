@@ -40,7 +40,7 @@ const TopPicksRow: React.FC<TopPicksRowProps> = ({ profile }) => {
 
   return (
     <div className="top-picks-row">
-      <h2 className="row-title">Today's Top Picks for {profile}</h2>
+      <h2 className="row-title">Today's Top Picks for you</h2>
       <div className="card-row">
         {topPicks.map((pick, index) => (
           <div
