@@ -251,19 +251,33 @@
   }
 
   .drama-hero {
-    height: 50vh;
-    min-height: 400px;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
-  .back-button {
-    top: 15px;
-    left: 15px;
-    padding: 8px 12px;
-    font-size: 0.9rem;
+  .hero-background {
+    position: relative;
+    height: 300px;
+    width: 100%;
   }
 
   .hero-overlay {
+    position: relative;
+    background: #141414;
     padding: 20px 15px;
+    display: block;
+  }
+
+  .back-button {
+    position: fixed;
+    top: 75px;
+    left: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    z-index: 100;
   }
 
   .drama-hero-title {
@@ -282,7 +296,7 @@
   .hero-description {
     line-height: 1.5;
     margin: 15px 0 20px 0;
-    max-height: 20vh;
+    max-height: none;
   }
 
   .hero-buttons {

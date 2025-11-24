@@ -1,5 +1,5 @@
 // src/data/profileBanner.ts
-import resumePdf from '../Mikhil-Resume.pdf';
+import resumePdf from "../Mikhil-Resume.pdf";
 
 export const profileBanner = {
   backgroundImage: { url: "/images/your-bg.jpg" },
