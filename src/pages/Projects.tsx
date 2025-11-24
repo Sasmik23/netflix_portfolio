@@ -65,6 +65,10 @@ const Projects: React.FC = () => {
   const projects = projectsData;
   const [currentImageIndex, setCurrentImageIndex] = useState<{ [key: number]: number }>({});
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handlePrevImage = (projectIndex: number, totalImages: number) => {
     setCurrentImageIndex(prev => ({
       ...prev,
