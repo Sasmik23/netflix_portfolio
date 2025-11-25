@@ -12,5 +12,4 @@ export const contactMe: ContactMe = {
   companyUniversity: "National University of Singapore",
   linkedinLink: "https://www.linkedin.com/in/mikhil-anand-aa593437/",
   email: "mikhilanand@gmail.com",
-  phoneNumber: "+65 9001 8594",
 };

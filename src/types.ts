@@ -52,7 +52,6 @@ export interface ContactMe {
   companyUniversity: string;
   linkedinLink: string;
   email: string;
-  phoneNumber: string;
 }
 
 export interface Skill {

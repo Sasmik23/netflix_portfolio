@@ -37,12 +37,6 @@ const ContactMe: React.FC = () => {
             {userData.email}
           </a>
         </div>
-        <div className="contact-item">
-          <FaPhoneAlt className="contact-icon" />
-          <a href={`tel:${userData.phoneNumber}`} className="contact-link">
-            {userData.phoneNumber}
-          </a>
-        </div>
         <div className="contact-fun">
           <p>Or catch up over a coffee ☕</p>
           <FaCoffee className="coffee-icon" />
