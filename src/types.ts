@@ -25,6 +25,8 @@ export interface TimelineItem {
   summaryPoints: string[];
   dateRange: string;
   image?: string; // Optional image for the timeline item
+  isUpcoming?: boolean; // Flag for upcoming/future experiences
+  isCurrent?: boolean; // Flag for current/ongoing experiences
 }
 
 export interface Project {

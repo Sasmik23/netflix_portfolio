@@ -7,8 +7,25 @@ import hybridAi from "../images/hybridai.png";
 import nus from "../images/nus.jpg";
 import octava from "../images/octava.jpg";
 import raffles from "../images/raffles.png";
+import govtech from "../images/govtech.gif";
+import ku from "../images/korea-university.png";
 
 export const timeline: TimelineItem[] = [
+  {
+    name: "GovTech Singapore",
+    timelineType: "work",
+    title: "Software Engineer Intern",
+    techStack:
+      "Gen AI, Python, FastAPI, React, LLM APIs, CI/CD, Cloud Platforms, Document Processing",
+    summaryPoints: [
+      "Building Intelligent Project Proposal Assistant for Digital Governance Division",
+      "Developing Gen AI-powered features with LLM APIs",
+      "Creating production-grade full-stack application with React frontend and secure FastAPI backend",
+    ],
+    dateRange: "Jan 2026 - May 2026",
+    image: govtech,
+    isUpcoming: true,
+  },
   {
     name: "Hyundai Motor Group Innovation Centre, Singapore",
     timelineType: "work",
@@ -24,6 +41,7 @@ export const timeline: TimelineItem[] = [
     ],
     dateRange: "Jul 2025 - Dec 2025",
     image: hmgicsPic,
+    isCurrent: true,
   },
   {
     name: "Cynapse, Singapore",
@@ -58,6 +76,19 @@ export const timeline: TimelineItem[] = [
     ],
     dateRange: "Jun 2024 - Aug 2024",
     image: hybridAi,
+  },
+  {
+    name: "Korea University, Seoul",
+    timelineType: "education",
+    title: "Winter Exchange Programme",
+    techStack: "International Exchange, Business, Korean Culture",
+    summaryPoints: [
+      "Participating in Business coursework",
+      "Engaging with international students and Korean academic environment",
+    ],
+    dateRange: "Dec 2025 - Jan 2026",
+    image: ku,
+    isUpcoming: true,
   },
   {
     name: "University of North Carolina, Chapel Hill",

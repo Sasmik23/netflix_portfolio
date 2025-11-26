@@ -80,7 +80,11 @@ const WorkExperience: React.FC = () => {
                     <img src={item.image} alt={item.title} className="timeline-image" />
                   </div>
                 )}
-                <h3 className="vertical-timeline-element-title">{item.title}</h3>
+                <h3 className="vertical-timeline-element-title">
+                  {item.title}
+                  {item.isUpcoming && <span className="upcoming-badge"> Upcoming</span>}
+                  {item.isCurrent && <span className="current-badge"> Current</span>}
+                </h3>
                 <h4 className="vertical-timeline-element-subtitle">{item.name}</h4>
                 <p className="vertical-timeline-element-tech">🔧 {item.techStack}</p>
                 {Array.isArray(item.summaryPoints) ? (
@@ -100,7 +104,11 @@ const WorkExperience: React.FC = () => {
                     <img src={item.image} alt={item.name} className="timeline-image" />
                   </div>
                 )}
-                <h3 className="vertical-timeline-element-title">{item.name}</h3>
+                <h3 className="vertical-timeline-element-title">
+                  {item.name}
+                  {item.isUpcoming && <span className="upcoming-badge"> Upcoming</span>}
+                  {item.isCurrent && <span className="current-badge"> Current</span>}
+                </h3>
                 <h4 className="vertical-timeline-element-subtitle">{item.title}</h4>
                 {Array.isArray(item.summaryPoints) ? (
                   <ul className="timeline-bullet-list">
