@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Skills.css';
 import { skills as skillsData } from '../data/skills';
 
@@ -27,6 +27,10 @@ const iconMap: { [key: string]: JSX.Element } = {
 };
 
 const Skills: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const skillsByCategory = skillsData.reduce((acc: any, skill: any) => {
     if (!acc[skill.category]) acc[skill.category] = [];
     acc[skill.category].push(skill);

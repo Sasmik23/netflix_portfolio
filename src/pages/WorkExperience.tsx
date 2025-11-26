@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { MdOutlineWork as WorkIcon } from 'react-icons/md';
@@ -9,6 +9,11 @@ import { timeline } from '../data/timeline';
 
 
 const WorkExperience: React.FC = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Sort by start date (most recent first)
   const timeLineData = [...timeline].sort((a, b) => {
     const getStartYear = (dateRange: string) => {

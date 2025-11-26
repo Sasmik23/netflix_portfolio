@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Dramas.css';
 import { FaTheaterMasks, FaCalendarAlt, FaMapMarkerAlt, FaUserTie } from 'react-icons/fa';
 import { dramas } from '../data/dramas';
 
 const Dramas: React.FC = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="dramas-container">
