@@ -21,7 +21,7 @@ const Dramas: React.FC = () => {
                         style={{ '--delay': `${index * 0.2}s` } as React.CSSProperties}
                     >
                         <div className="drama-poster">
-                            <img src={drama.image.url} alt={drama.title} className="drama-image" />
+                            <img src={drama.image.url} alt={drama.title} className="drama-image" loading="lazy" />
                             <div className="drama-overlay">
                                 <div className="language-badge">{drama.language}</div>
                             </div>

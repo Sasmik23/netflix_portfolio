@@ -82,7 +82,7 @@ const WorkExperience: React.FC = () => {
               <div style={{ color: 'white' }}>
                 {item.image && (
                   <div className="timeline-image-container">
-                    <img src={item.image} alt={item.title} className="timeline-image" />
+                    <img src={item.image} alt={item.title} className="timeline-image" loading="lazy" />
                   </div>
                 )}
                 <h3 className="vertical-timeline-element-title">
@@ -106,7 +106,7 @@ const WorkExperience: React.FC = () => {
               <div style={{ color: 'white' }}>
                 {item.image && (
                   <div className="timeline-image-container">
-                    <img src={item.image} alt={item.name} className="timeline-image" />
+                    <img src={item.image} alt={item.name} className="timeline-image" loading="lazy" />
                   </div>
                 )}
                 <h3 className="vertical-timeline-element-title">
