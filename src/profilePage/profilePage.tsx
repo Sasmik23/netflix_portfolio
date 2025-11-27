@@ -22,7 +22,7 @@ const ProfilePage: React.FC = () => {
     // If there's a backgroundGif in location state (coming from Browse or navigation with state), use it
     // Otherwise, pick a new random one
     return location.state?.backgroundGif || getRandomGif(profile);
-  }, [location.state?.backgroundGif, profile]);
+  }, [location.state?.backgroundGif, profile, profileName]);
 
   const profileImage = location.state?.profileImage;
 
@@ -33,9 +33,9 @@ const ProfilePage: React.FC = () => {
           className="profile-page"
           style={{ backgroundImage: `url(${backgroundGif})` }}
         >
-          <ProfileBanner />
+          <ProfileBanner key={`banner-theatre`} />
         </div>
-        <AdventurerProfileContent backgroundGif={backgroundGif} profileImage={profileImage} />
+        <AdventurerProfileContent key={`adventurer-${profile}`} backgroundGif={backgroundGif} profileImage={profileImage} />
       </>
     );
   }
@@ -46,10 +46,10 @@ const ProfilePage: React.FC = () => {
         className="profile-page"
         style={{ backgroundImage: `url(${backgroundGif})` }}
       >
-        <ProfileBanner />
+        <ProfileBanner key={`banner-${profile}`} />
       </div>
-      <TopPicksRow profile={profile} />
-      <ContinueWatching profile={profile} />
+      <TopPicksRow key={`toppicks-${profile}`} profile={profile} />
+      <ContinueWatching key={`continue-${profile}`} profile={profile} />
     </>
   );
 };

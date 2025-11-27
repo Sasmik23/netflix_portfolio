@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-left">
           <Link to="/" className="navbar-logo">
-            <img src={netflixLogo} alt="Netflix" />
+            <img src={netflixLogo} alt="Netflix" loading="lazy" />
           </Link>
           <ul className="navbar-links">
             <li><Link to="/browse" state={{ profileImage }}>Home</Link></li>
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             <div></div>
             <div></div>
           </div>
-          <img src={profileImage} alt="Profile" className="profile-icon" onClick={() => { navigate('/browse') }} />
+          <img src={profileImage} alt="Profile" className="profile-icon" onClick={() => { navigate('/browse') }} loading="lazy" />
         </div>
       </nav>
 
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
       {/* Sidebar (only visible on mobile) */}
       <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo">
-          <img src={netflixLogo} alt="Netflix Logo" />
+          <img src={netflixLogo} alt="Netflix Logo" loading="lazy" />
         </div>
         <ul>
           <li><Link to="/browse" onClick={closeSidebar} state={{ profileImage }}><FaHome /> Home</Link></li>

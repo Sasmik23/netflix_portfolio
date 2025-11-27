@@ -35,7 +35,7 @@ const AdventurerProfileContent: React.FC<AdventurerProfileContentProps> = ({ bac
                         onClick={() => handlePlayClick(drama)}
                     >
                         <div className="drama-poster-container">
-                            <img src={drama.image.url} alt={drama.title} className="drama-poster" />
+                            <img src={drama.image.url} alt={drama.title} className="drama-poster" loading="lazy" />
                             <div className="language-badge">{drama.language}</div>
                             <div className="card-overlay">
                                 <div className="overlay-content">

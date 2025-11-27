@@ -24,6 +24,7 @@ const NetflixTitle: React.FC = () => {
         alt="Mikhil Logo"
         className={`netflix-logo ${isAnimating ? 'animate' : ''}`}
         onAnimationEnd={handleAnimationEnd}
+        loading="eager"
       />
     </div>
   );

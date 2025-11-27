@@ -104,6 +104,7 @@ const Projects: React.FC = () => {
                   src={images[currentIndex]}
                   alt={`${project.title} - ${currentIndex + 1}`}
                   className="project-image"
+                  loading="lazy"
                 />
                 {images.length > 1 && (
                   <>

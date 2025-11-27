@@ -57,7 +57,7 @@ const DramaDetail: React.FC = () => {
             <div className="drama-detail-container">
                 {/* Hero Banner */}
                 <div className="drama-hero">
-                    <img src={bannerSrc} alt={drama.title} className="hero-background" />
+                    <img src={bannerSrc} alt={drama.title} className="hero-background" loading="lazy" />
                     <div className="hero-overlay">
                         <div className="hero-content">
                             <button className="back-button" onClick={() => navigate('/profile/Theatre', {
