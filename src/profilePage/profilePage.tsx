@@ -13,9 +13,9 @@ const ProfilePage: React.FC = () => {
   const location = useLocation();
   const { profileName } = useParams<{ profileName: string }>();
 
-  const profile = ['Computing', 'Theatre'].includes(profileName!)
-    ? (profileName as ProfileType)
-    : 'Computing';
+  // Normalize profileName to proper case (case-insensitive matching)
+  const normalizedProfile = profileName?.toLowerCase();
+  const profile: ProfileType = normalizedProfile === 'theatre' ? 'Theatre' : 'Computing';
 
   // Pick a random GIF every time the component mounts (on every navigation)
   const backgroundGif = useMemo(() => {

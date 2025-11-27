@@ -1,11 +1,16 @@
+import computingBg1 from '../images/computing-bg-1.gif';
+import computingBg2 from '../images/computing-bg-2.gif';
+import theatreBg1 from '../images/theatre-bg-1.gif';
+import theatreBg2 from '../images/theatre-bg-2.gif';
+
 export const profileBackgroundGifs = {
   Computing: [
-    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTd3bDlmdGV3d29keTFrOGRob2pyd3Z3MGJlZTBmNWZ2cjF3NjhudCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DqvaPxbqDww0g/giphy.gif",
-    "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGNidDl5emZpejY2eGFxa2I4NW0zZGNpbWRlbnBrZ3N2dWhhbzM1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TFPdmm3rdzeZ0kP3zG/giphy.gif",
+    computingBg1,
+    computingBg2,
   ],
   Theatre: [
-    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Q2dzgwNmlrNnR6eTRwczR4Y2twMm90NnVocWw3ZHZwaHh2YTd0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDZceiSecNEBgdTbBN/giphy.gif",
-    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWlmaTBrb2x2dWJodW52dm9majlnemp3YjI4a2s1N282Z3lrdnh4dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPk461838M12n0A/giphy.gif",
+    theatreBg1,
+    theatreBg2,
   ],
 };
 
