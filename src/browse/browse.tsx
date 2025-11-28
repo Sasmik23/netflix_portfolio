@@ -25,7 +25,7 @@ const Browse: React.FC = () => {
     profiles.forEach(profile => {
       const img = new Image();
       img.src = profile.image;
-      
+
       // Preload all possible background GIFs
       profileBackgroundGifs[profile.name].forEach(gif => {
         const gifImg = new Image();

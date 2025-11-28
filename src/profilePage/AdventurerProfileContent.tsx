@@ -36,10 +36,10 @@ const AdventurerProfileContent: React.FC<AdventurerProfileContentProps> = ({ bac
                         onClick={() => handlePlayClick(drama)}
                     >
                         <div className="drama-poster-container">
-                            <img 
-                                src={drama.image.thumbnail || getThumbnailPath(drama.image.url)} 
-                                alt={drama.title} 
-                                className="drama-poster" 
+                            <img
+                                src={drama.image.thumbnail || getThumbnailPath(drama.image.url)}
+                                alt={drama.title}
+                                className="drama-poster"
                                 loading="lazy"
                                 decoding="async"
                             />

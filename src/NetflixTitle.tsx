@@ -1,15 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoImage from './images/logo-2.png';
+import netflixSound from './netflix-sound.mp3';
 import './NetflixTitle.css';  // if you put the CSS here
 
 const NetflixTitle: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const navigate = useNavigate();
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     console.log('Mount → start animation');
     setIsAnimating(true);
+    
+    // Play the Netflix sound
+    if (audioRef.current) {
+      audioRef.current.play().catch(error => {
+        console.log('Audio playback failed:', error);
+        // Autoplay might be blocked by browser policy
+      });
+    }
   }, []);
 
   const handleAnimationEnd = () => {
@@ -19,6 +29,7 @@ const NetflixTitle: React.FC = () => {
 
   return (
     <div className="loading-container">
+      <audio ref={audioRef} src={netflixSound} preload="auto" />
       <img
         src={logoImage}
         alt="Mikhil Logo"

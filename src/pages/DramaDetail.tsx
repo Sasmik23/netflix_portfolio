@@ -129,9 +129,9 @@ const DramaDetail: React.FC = () => {
                                 onClick={() => setSelectedImageIndex(index)}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <img 
-                                    src={galleryThumbnails[index]} 
-                                    alt={`${drama.title} photo ${index + 1}`} 
+                                <img
+                                    src={galleryThumbnails[index]}
+                                    alt={`${drama.title} photo ${index + 1}`}
                                     loading="lazy"
                                     decoding="async"
                                     data-fullsize={image}

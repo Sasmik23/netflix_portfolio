@@ -8,10 +8,12 @@
  * @returns The thumbnail path
  */
 export const getThumbnailPath = (imagePath: string): string => {
-  const lastDotIndex = imagePath.lastIndexOf('.');
+  const lastDotIndex = imagePath.lastIndexOf(".");
   if (lastDotIndex === -1) return imagePath;
-  
-  return `${imagePath.substring(0, lastDotIndex)}_thumb${imagePath.substring(lastDotIndex)}`;
+
+  return `${imagePath.substring(0, lastDotIndex)}_thumb${imagePath.substring(
+    lastDotIndex
+  )}`;
 };
 
 /**
@@ -45,9 +47,12 @@ export const preloadImageWithPriority = (imageUrl: string): Promise<void> => {
  * @param isThumbnail - Whether to use thumbnail version
  * @returns The appropriate image path
  */
-export const getOptimizedImageUrl = (imagePath: string, isThumbnail: boolean = false): string => {
+export const getOptimizedImageUrl = (
+  imagePath: string,
+  isThumbnail: boolean = false
+): string => {
   if (!isThumbnail) return imagePath;
-  
+
   // Check if a thumbnail already exists, otherwise return original
   return getThumbnailPath(imagePath);
 };
@@ -57,8 +62,11 @@ export const getOptimizedImageUrl = (imagePath: string, isThumbnail: boolean = f
  * @param imageElement - The image element to observe
  * @param fullSizeUrl - The full-size image URL to load
  */
-export const lazyLoadImage = (imageElement: HTMLImageElement, fullSizeUrl: string): void => {
-  if ('IntersectionObserver' in window) {
+export const lazyLoadImage = (
+  imageElement: HTMLImageElement,
+  fullSizeUrl: string
+): void => {
+  if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
