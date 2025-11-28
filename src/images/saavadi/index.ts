@@ -19,3 +19,26 @@ export { default as saavadi18 } from "./17.png";
 export { default as saavadi19 } from "./18.png";
 export { default as saavadi20 } from "./IMG-20250704-WA0000.jpg";
 export { default as saavadi21 } from "./saavadi2.jpg";
+
+// Thumbnails
+export { default as saavadi1_thumb } from "./saavadi1_thumb.jpg";
+export { default as saavadi2_thumb } from "./1_thumb.png";
+export { default as saavadi3_thumb } from "./2_thumb.png";
+export { default as saavadi4_thumb } from "./3_thumb.png";
+export { default as saavadi5_thumb } from "./4_thumb.png";
+export { default as saavadi6_thumb } from "./5_thumb.png";
+export { default as saavadi7_thumb } from "./6_thumb.jpg";
+export { default as saavadi8_thumb } from "./7_thumb.png";
+export { default as saavadi9_thumb } from "./8_thumb.png";
+export { default as saavadi10_thumb } from "./9_thumb.png";
+export { default as saavadi11_thumb } from "./10_thumb.png";
+export { default as saavadi12_thumb } from "./11_thumb.png";
+export { default as saavadi13_thumb } from "./12_thumb.png";
+export { default as saavadi14_thumb } from "./13_thumb.png";
+export { default as saavadi15_thumb } from "./14_thumb.png";
+export { default as saavadi16_thumb } from "./15_thumb.png";
+export { default as saavadi17_thumb } from "./16_thumb.png";
+export { default as saavadi18_thumb } from "./17_thumb.png";
+export { default as saavadi19_thumb } from "./18_thumb.png";
+export { default as saavadi20_thumb } from "./IMG-20250704-WA0000_thumb.jpg";
+export { default as saavadi21_thumb } from "./saavadi2_thumb.jpg";

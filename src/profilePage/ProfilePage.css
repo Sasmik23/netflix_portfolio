@@ -5,7 +5,9 @@
   color: #fff;
   background-size: cover;
   background-position: center;
+  background-color: #141414; /* Fallback while GIF loads */
   min-height: 500px;
+  transition: background-image 0.3s ease-in;
 }
 
 h1 {

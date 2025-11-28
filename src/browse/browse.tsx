@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProfileCard from '../components/ProfileCard';
 import clark_cs from '../images/Clark_Kent_CS.jpg';
@@ -19,6 +19,20 @@ const Browse: React.FC = () => {
       image: clark_theatre,
     },
   ];
+
+  // Preload profile images and background GIFs
+  useEffect(() => {
+    profiles.forEach(profile => {
+      const img = new Image();
+      img.src = profile.image;
+      
+      // Preload all possible background GIFs
+      profileBackgroundGifs[profile.name].forEach(gif => {
+        const gifImg = new Image();
+        gifImg.src = gif;
+      });
+    });
+  }, []);
 
   const handleProfileClick = (profile: { name: 'Computing' | 'Theatre'; image: string }) => {
     const randomGif = getRandomGif(profile.name);

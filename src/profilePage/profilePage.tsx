@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import './ProfilePage.css';
 
@@ -25,6 +25,19 @@ const ProfilePage: React.FC = () => {
   }, [location.state?.backgroundGif, profile, profileName]);
 
   const profileImage = location.state?.profileImage;
+
+  // Preload the background GIF immediately
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = backgroundGif;
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, [backgroundGif]);
 
   if (profile === 'Theatre') {
     return (

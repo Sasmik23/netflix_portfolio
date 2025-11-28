@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaPlay, FaInfoCircle } from 'react-icons/fa';
 import { Drama } from '../types';
 import { dramas } from '../data/dramas';
+import { getThumbnailPath } from '../utils/imageOptimization';
 import './AdventurerProfileContent.css';
 
 interface AdventurerProfileContentProps {
@@ -35,7 +36,13 @@ const AdventurerProfileContent: React.FC<AdventurerProfileContentProps> = ({ bac
                         onClick={() => handlePlayClick(drama)}
                     >
                         <div className="drama-poster-container">
-                            <img src={drama.image.url} alt={drama.title} className="drama-poster" loading="lazy" />
+                            <img 
+                                src={drama.image.thumbnail || getThumbnailPath(drama.image.url)} 
+                                alt={drama.title} 
+                                className="drama-poster" 
+                                loading="lazy"
+                                decoding="async"
+                            />
                             <div className="language-badge">{drama.language}</div>
                             <div className="card-overlay">
                                 <div className="overlay-content">

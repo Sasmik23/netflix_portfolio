@@ -95,7 +95,8 @@
   object-position: center;
   padding: 20px;
   border-bottom: 2px solid #e50914;
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
 }
 
 .project-card:hover .project-image {

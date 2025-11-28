@@ -70,11 +70,12 @@ export interface Drama {
   productionCompany: string;
   year: string;
   language: "Tamil" | "English";
-  image: { url: string };
+  image: { url: string; thumbnail?: string }; // thumbnail for faster loading on cards
   bannerImage?: { url: string }; // Optional larger banner image for hero/header
   venue: string;
   director: string;
   galleryImages?: string[]; // Optional array for additional gallery images
+  galleryThumbnails?: string[]; // Optional thumbnails for gallery images (must match galleryImages length)
   galleryCaptions?: string[]; // Optional captions for gallery images (must match galleryImages length)
   videoLink?: string; // Optional link to video/recording
 }

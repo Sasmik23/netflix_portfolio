@@ -188,6 +188,8 @@
   overflow: hidden;
   transition: transform 0.3s ease;
   cursor: pointer;
+  background: #1a1a1a; /* Skeleton background */
+  min-height: 200px; /* Prevent collapse while loading */
 }
 
 .gallery-item:hover {

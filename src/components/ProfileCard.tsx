@@ -11,7 +11,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, image, onClick }) => {
   return (
     <div className="profile-card" onClick={onClick}>
       <div className="image-container">
-        <img src={image} alt={`${name} profile`} className="profile-image" loading="lazy" />
+        <img src={image} alt={`${name} profile`} className="profile-image" loading="eager" fetchPriority="high" decoding="async" />
       </div>
       <h3 className="profile-name">{name}</h3>
     </div>

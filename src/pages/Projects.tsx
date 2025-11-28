@@ -69,6 +69,17 @@ const Projects: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Preload all images for projects with multiple images
+  useEffect(() => {
+    projects.forEach((project) => {
+      const images = project.images || [project.image.url];
+      images.forEach((image) => {
+        const img = new Image();
+        img.src = typeof image === 'string' ? image : image;
+      });
+    });
+  }, [projects]);
+
   const handlePrevImage = (projectIndex: number, totalImages: number) => {
     setCurrentImageIndex(prev => ({
       ...prev,
@@ -104,7 +115,7 @@ const Projects: React.FC = () => {
                   src={images[currentIndex]}
                   alt={`${project.title} - ${currentIndex + 1}`}
                   className="project-image"
-                  loading="lazy"
+                  loading="eager"
                 />
                 {images.length > 1 && (
                   <>

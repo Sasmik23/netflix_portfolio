@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { FaPlay, FaPlus, FaThumbsUp, FaCalendarAlt, FaMapMarkerAlt, FaUserTie, FaArrowLeft, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Drama } from '../types';
 import NavBar from '../components/NavBar';
+import { preloadImages, preloadImageWithPriority, getThumbnailPath } from '../utils/imageOptimization';
 import './DramaDetail.css';
 
 const DramaDetail: React.FC = () => {
@@ -12,11 +13,29 @@ const DramaDetail: React.FC = () => {
     const backgroundGif = location.state?.backgroundGif;
     const profileImage = location.state?.profileImage;
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+    const [bannerLoaded, setBannerLoaded] = useState(false);
 
     // Scroll to top when component mounts
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    // Priority load hero banner and preload full-size gallery images
+    useEffect(() => {
+        if (drama) {
+            // Priority load banner image first
+            const bannerSrc = drama.bannerImage?.url || drama.image.url;
+            preloadImageWithPriority(bannerSrc).then(() => setBannerLoaded(true));
+
+            // Preload full-size gallery images in background
+            const galleryImages = drama.galleryImages && drama.galleryImages.length > 0
+                ? drama.galleryImages
+                : [];
+            if (galleryImages.length > 0) {
+                preloadImages(galleryImages);
+            }
+        }
+    }, [drama]);
 
     if (!drama) {
         navigate('/profile/Theatre');
@@ -36,6 +55,11 @@ const DramaDetail: React.FC = () => {
             `https://picsum.photos/seed/${drama.title}3/800/450`,
             `https://picsum.photos/seed/${drama.title}4/800/450`,
         ];
+
+    // Get thumbnails for gallery - use provided thumbnails or generate paths
+    const galleryThumbnails = drama.galleryThumbnails && drama.galleryThumbnails.length === galleryImages.length
+        ? drama.galleryThumbnails
+        : galleryImages.map(img => getThumbnailPath(img));
 
     const handlePrevImage = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -57,7 +81,7 @@ const DramaDetail: React.FC = () => {
             <div className="drama-detail-container">
                 {/* Hero Banner */}
                 <div className="drama-hero">
-                    <img src={bannerSrc} alt={drama.title} className="hero-background" loading="lazy" />
+                    <img src={bannerSrc} alt={drama.title} className="hero-background" loading="eager" fetchPriority="high" />
                     <div className="hero-overlay">
                         <div className="hero-content">
                             <button className="back-button" onClick={() => navigate('/profile/Theatre', {
@@ -105,7 +129,13 @@ const DramaDetail: React.FC = () => {
                                 onClick={() => setSelectedImageIndex(index)}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <img src={image} alt={`${drama.title} photo ${index + 1}`} loading="lazy" />
+                                <img 
+                                    src={galleryThumbnails[index]} 
+                                    alt={`${drama.title} photo ${index + 1}`} 
+                                    loading="lazy"
+                                    decoding="async"
+                                    data-fullsize={image}
+                                />
                             </div>
                         ))}
                     </div>

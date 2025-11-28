@@ -42,8 +42,8 @@ const ProfileBanner: React.FC = () => {
           <div className="resume-modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-modal" onClick={closeModal}>✕</button>
             <div className="resume-images">
-              <img src={resume1} alt="Resume page 1" className="resume-page" loading="lazy" />
-              <img src={resume2} alt="Resume page 2" className="resume-page" loading="lazy" />
+              <img src={resume1} alt="Resume page 1" className="resume-page" loading="eager" decoding="async" />
+              <img src={resume2} alt="Resume page 2" className="resume-page" loading="eager" decoding="async" />
             </div>
           </div>
         </div>
