@@ -54,14 +54,20 @@
 .drama-poster-container {
   position: relative;
   width: 100%;
-  height: 400px;
+  aspect-ratio: 16 / 9;
+  min-height: 320px;
   overflow: hidden;
   background: #1a1a1a; /* Skeleton background while loading */
+}
+
+.featured-drama-card .drama-poster-container {
+  min-height: 300px;
 }
 
 .drama-poster {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
   transition: transform 0.3s ease;
   background: #1a1a1a; /* Fallback */
@@ -102,11 +108,15 @@
   align-items: flex-end;
   padding: 20px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .netflix-drama-card:hover .card-overlay {
   opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .overlay-content {
@@ -208,7 +218,11 @@
   }
 
   .drama-poster-container {
-    height: 350px;
+    min-height: 260px;
+  }
+
+  .featured-drama-card .drama-poster-container {
+    min-height: 300px;
   }
 
   .drama-card-title {

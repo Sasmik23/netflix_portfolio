@@ -12,7 +12,7 @@ const NetflixTitle: React.FC = () => {
   useEffect(() => {
     console.log('Mount → start animation');
     setIsAnimating(true);
-    
+
     // Play the Netflix sound
     if (audioRef.current) {
       audioRef.current.play().catch(error => {

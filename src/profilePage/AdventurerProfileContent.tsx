@@ -28,45 +28,52 @@ const AdventurerProfileContent: React.FC<AdventurerProfileContentProps> = ({ bac
             </div>
 
             <div className="netflix-drama-grid">
-                {dramas.map((drama, index) => (
-                    <div
-                        key={index}
-                        className="netflix-drama-card"
-                        style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
-                        onClick={() => handlePlayClick(drama)}
-                    >
-                        <div className="drama-poster-container">
-                            <img
-                                src={drama.image.thumbnail || getThumbnailPath(drama.image.url)}
-                                alt={drama.title}
-                                className="drama-poster"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                            <div className="language-badge">{drama.language}</div>
-                            <div className="card-overlay">
-                                <div className="overlay-content">
-                                    <h3 className="drama-card-title">{drama.title}</h3>
-                                    <p className="drama-card-role">as {drama.role}</p>
-                                    <div className="card-buttons">
-                                        <button
-                                            className="play-button"
-                                            onClick={() => handlePlayClick(drama)}
-                                        >
-                                            <FaPlay /> Play
-                                        </button>
-                                        <button
-                                            className="info-button"
-                                            onClick={() => handlePlayClick(drama)}
-                                        >
-                                            <FaInfoCircle /> More Info
-                                        </button>
+                {dramas.map((drama, index) => {
+                    const isFeaturedDrama = index < 4; // ensure first four use full-res images
+                    const posterSrc = isFeaturedDrama
+                        ? drama.image.url
+                        : (drama.image.thumbnail || getThumbnailPath(drama.image.url));
+
+                    return (
+                        <div
+                            key={index}
+                            className={`netflix-drama-card ${isFeaturedDrama ? 'featured-drama-card' : ''}`}
+                            style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
+                            onClick={() => handlePlayClick(drama)}
+                        >
+                            <div className="drama-poster-container">
+                                <img
+                                    src={posterSrc}
+                                    alt={drama.title}
+                                    className="drama-poster"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <div className="language-badge">{drama.language}</div>
+                                <div className="card-overlay">
+                                    <div className="overlay-content">
+                                        <h3 className="drama-card-title">{drama.title}</h3>
+                                        <p className="drama-card-role">as {drama.role}</p>
+                                        <div className="card-buttons">
+                                            <button
+                                                className="play-button"
+                                                onClick={() => handlePlayClick(drama)}
+                                            >
+                                                <FaPlay /> Play
+                                            </button>
+                                            <button
+                                                className="info-button"
+                                                onClick={() => handlePlayClick(drama)}
+                                            >
+                                                <FaInfoCircle /> More Info
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );
