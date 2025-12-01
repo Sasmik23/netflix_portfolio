@@ -20,9 +20,9 @@
   </url>
   <url>
     <loc>https://www.mikhilanand.com/profile/Theatre</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.2</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.mikhilanand.com/projects</loc>
@@ -34,7 +34,7 @@
     <loc>https://www.mikhilanand.com/skills</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://www.mikhilanand.com/work-experience</loc>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://www.mikhilanand.com/dramas</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -58,6 +58,6 @@
     <loc>https://www.mikhilanand.com/contact-me</loc>
     <lastmod>2025-11-27</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.2</priority>
   </url>
 </urlset>
