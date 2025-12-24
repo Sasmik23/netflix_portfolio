@@ -41,7 +41,6 @@ export const timeline: TimelineItem[] = [
     ],
     dateRange: "Jul 2025 - Dec 2025",
     image: hmgicsPic,
-    isCurrent: true,
   },
   {
     name: "Cynapse, Singapore",
@@ -88,7 +87,7 @@ export const timeline: TimelineItem[] = [
     ],
     dateRange: "Dec 2025 - Jan 2026",
     image: ku,
-    isUpcoming: true,
+    isCurrent: true,
   },
   {
     name: "University of North Carolina, Chapel Hill",
