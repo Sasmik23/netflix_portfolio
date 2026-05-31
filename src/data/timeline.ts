@@ -24,7 +24,6 @@ export const timeline: TimelineItem[] = [
     ],
     dateRange: "Jan 2026 - May 2026",
     image: govtech,
-    isUpcoming: true,
   },
   {
     name: "Hyundai Motor Group Innovation Centre, Singapore",

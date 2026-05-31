@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { FaPlay, FaPlus, FaThumbsUp, FaCalendarAlt, FaMapMarkerAlt, FaUserTie, FaArrowLeft, FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Drama } from '../types';
 import NavBar from '../components/NavBar';
 import { preloadImages, preloadImageWithPriority, getThumbnailPath } from '../utils/imageOptimization';
+import { dramas } from '../data/dramas';
 import './DramaDetail.css';
 
 const DramaDetail: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const drama = location.state?.drama as Drama;
+    const { dramaId } = useParams<{ dramaId: string }>();
     const backgroundGif = location.state?.backgroundGif;
     const profileImage = location.state?.profileImage;
+    const drama = (location.state?.drama as Drama) ??
+        dramas.find(d => d.title.replace(/\s+/g, '-').toLowerCase() === dramaId);
     const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
     const [bannerLoaded, setBannerLoaded] = useState(false);
 

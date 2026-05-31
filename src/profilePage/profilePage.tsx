@@ -46,7 +46,7 @@ const ProfilePage: React.FC = () => {
           className="profile-page"
           style={{ backgroundImage: `url(${backgroundGif})` }}
         >
-          <ProfileBanner key={`banner-theatre`} />
+          <ProfileBanner key={`banner-theatre`} summary="Aspiring theatre artist with experience in English and Tamil theatre across school, university, and professional productions." hideLinkedin resumePdfUrl="/Theatre-CV.pdf" />
         </div>
         <AdventurerProfileContent key={`adventurer-${profile}`} backgroundGif={backgroundGif} profileImage={profileImage} />
       </>

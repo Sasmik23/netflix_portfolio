@@ -48,6 +48,7 @@ export const dramas: Drama[] = [
       s25.s25_10_thumb,
       s25.s25_1_thumb,
     ],
+    videoLink: "https://www.youtube.com/watch?v=yG9cDvA4OsA&t=1402s",
   },
   {
     title: "Saavadi",
@@ -114,7 +115,7 @@ export const dramas: Drama[] = [
     title: "Naai",
     description:
       "Naai is written by Nallu Dhinakharan and Karthikeyan and Directed by Karthikeyan, starring Mikhil. In 'Naai - Dog', you are taken on a rollercoaster journey through the twisted mind of an ordinary office worker with dreams of success.",
-    role: "Nayakan",
+    role: "Naayakan",
     productionCompany: "Agam Theatre Lab",
     year: "2024",
     language: "Tamil",
